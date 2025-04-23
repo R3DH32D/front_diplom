@@ -66,7 +66,7 @@ const fetchCategories = async () => {
   error.value = '';
   
   try {
-    // Replace with your actual API endpoint
+
     const response = await axios.get('api/calculator/category');
     console.log(response.data);
     
@@ -91,7 +91,7 @@ const generateBuild = async () => {
   loading.value = true;
   
   try {
-    // Replace with your actual API endpoint
+
     
     const response = await axios.get('api/calculator/configuration/new', {
       params: {
@@ -100,7 +100,7 @@ const generateBuild = async () => {
       }
     });
     console.log(response)
-    // Store the build data and navigate to results page
+
     localStorage.setItem('buildResult', JSON.stringify(response.data));
     router.push('/results');
   } catch (err) {

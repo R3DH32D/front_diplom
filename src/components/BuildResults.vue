@@ -37,12 +37,27 @@
           <p>{{ buildData.motherboard.name }}</p>
           <p class="price">{{ buildData.motherboard.cost }}Р</p>
         </div>
+        <div class="spec-item">
+          <h3>Накопитель</h3>
+          <p>{{ buildData.motherboard.name }}</p>
+          <p class="price">{{ buildData.motherboard.cost }}Р</p>
+        </div>
+        <div class="spec-item">
+          <h3>Охлаждение</h3>
+          <p>{{ buildData.motherboard.name }}</p>
+          <p class="price">{{ buildData.motherboard.cost }}Р</p>
+        </div>
+        <div class="spec-item">
+          <h3>Корпус</h3>
+          <p>{{ buildData.motherboard.name }}</p>
+          <p class="price">{{ buildData.motherboard.cost }}Р</p>
+        </div>
       </div>
       
-      <!-- <div class="total-section">
+      <div class="total-section">
         <p class="total-label">Total Budget:</p>
         <p class="total-price">{{ totalBudget }}Р</p>
-      </div> -->
+      </div>
       
       <button class="back-button" @click="goBack">Вернуться в конфигуратор</button>
     </div>
@@ -63,7 +78,7 @@ onBeforeMount(() => {
     buildData.value = JSON.parse(storedData);
     console.log("stored",buildData.value)
   }
-  // totalBudget.value = buildData.value.cpu.cost + buildData.value.gpu.cost + buildData.value.ram.cost + buildData.value.power_unit.cost + buildData.value.motherboard.cost
+  totalBudget.value = buildData.value.cpu.cost + buildData.value.gpu.cost + buildData.value.ram.cost + buildData.value.power_unit.cost + buildData.value.motherboard.cost + buildData.value.motherboard.cost + buildData.value.motherboard.cost + buildData.value.motherboard.cost
 });
 
 const goBack = () => {
